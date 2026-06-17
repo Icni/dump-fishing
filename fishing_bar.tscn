@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://b7e1sdwf1xufm"]
+
+[ext_resource type="Texture2D" uid="uid://cnfh1hat508d4" path="res://fishing bar/fishing_bar_bg.png" id="1_ee0s1"]
+[ext_resource type="Script" uid="uid://dn5mg6goowq6i" path="res://fishing bar/fishing_bar.gd" id="1_mgyri"]
+[ext_resource type="Texture2D" uid="uid://c6uuy28l1a5w8" path="res://fishing bar/fishing_bar.png" id="2_mgyri"]
+[ext_resource type="Script" uid="uid://clqjjcbriqhdr" path="res://target.gd" id="2_q7h3n"]
+[ext_resource type="Texture2D" uid="uid://cmipdijj72jr5" path="res://fishing bar/target.png" id="2_ttsqj"]
+[ext_resource type="Texture2D" uid="uid://tf6hia14a012" path="res://fishing bar/fishing_bar_progress_bg.png" id="4_w08my"]
+[ext_resource type="Script" uid="uid://bnbu2erwtm81x" path="res://fishing bar/progress_bar.gd" id="5_ttsqj"]
+[ext_resource type="Texture2D" uid="uid://bi3588bhj1da1" path="res://fishing bar/fishing_bar_progress.png" id="6_qgglg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ee0s1"]
+size = Vector2(2, 124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgyri"]
+size = Vector2(15.875, 2.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w08my"]
+size = Vector2(10, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7h3n"]
+size = Vector2(12, 28.050003)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ttsqj"]
+radius = 3.0
+
+[node name="FishingBar" type="Node2D" unique_id=62285843]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1916395970]
+position = Vector2(8, 64)
+texture = ExtResource("1_ee0s1")
+
+[node name="StaticWalls" type="StaticBody2D" parent="." unique_id=1097070112]
+position = Vector2(8, 48)
+collision_mask = 3
+
+[node name="LeftWall" type="CollisionShape2D" parent="StaticWalls" unique_id=904428430]
+position = Vector2(-7, 16)
+shape = SubResource("RectangleShape2D_ee0s1")
+
+[node name="RightWall" type="CollisionShape2D" parent="StaticWalls" unique_id=2006744360]
+position = Vector2(7, 16)
+shape = SubResource("RectangleShape2D_ee0s1")
+
+[node name="Floor" type="CollisionShape2D" parent="StaticWalls" unique_id=867469200]
+position = Vector2(0.0625, 78.9375)
+shape = SubResource("RectangleShape2D_mgyri")
+
+[node name="Ceiling" type="CollisionShape2D" parent="StaticWalls" unique_id=126493897]
+position = Vector2(0, -47)
+shape = SubResource("RectangleShape2D_mgyri")
+
+[node name="BarRigidbody2D" type="RigidBody2D" parent="." unique_id=1509325973]
+position = Vector2(8, 112)
+collision_layer = 2
+gravity_scale = 0.2
+lock_rotation = true
+continuous_cd = 1
+max_contacts_reported = 1000
+script = ExtResource("1_mgyri")
+bar_speed = 500.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarRigidbody2D" unique_id=1999325377]
+position = Vector2(0, -0.05000305)
+shape = SubResource("RectangleShape2D_w08my")
+
+[node name="BarSprite" type="Sprite2D" parent="BarRigidbody2D" unique_id=1389915543]
+position = Vector2(0, -0.05000305)
+texture = ExtResource("2_mgyri")
+
+[node name="Area2D" type="Area2D" parent="BarRigidbody2D" unique_id=1930300107]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarRigidbody2D/Area2D" unique_id=427297013]
+position = Vector2(0, -0.025001526)
+shape = SubResource("RectangleShape2D_q7h3n")
+
+[node name="TargetRigidBody2D" type="RigidBody2D" parent="." unique_id=1544521057]
+position = Vector2(8, 92)
+collision_layer = 2
+mass = 0.001
+gravity_scale = 0.0
+continuous_cd = 1
+script = ExtResource("2_q7h3n")
+play_area = Rect2(6, 6, 4, 116)
+fixation = 0.1
+leap = 80.0
+speed = 4.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetRigidBody2D" unique_id=1900327560]
+shape = SubResource("CircleShape2D_ttsqj")
+
+[node name="TargetSprite" type="Sprite2D" parent="TargetRigidBody2D" unique_id=355460403]
+texture = ExtResource("2_ttsqj")
+
+[node name="FishingBarProgressBg" type="Sprite2D" parent="." unique_id=676716006]
+position = Vector2(21.5, 64)
+texture = ExtResource("4_w08my")
+
+[node name="ProgressBar" type="NinePatchRect" parent="." unique_id=2126379560 node_paths=PackedStringArray("bar_area")]
+offset_left = 25.0
+offset_top = 126.0
+offset_right = 32.0
+offset_bottom = 129.0
+rotation = 3.1415927
+texture = ExtResource("6_qgglg")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+script = ExtResource("5_ttsqj")
+bar_height = 124.0
+bar_area = NodePath("../BarRigidbody2D/Area2D")
+progress_speed = 0.2

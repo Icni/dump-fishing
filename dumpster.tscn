@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3738epjv0xbw"]
 
-[ext_resource type="Texture2D" uid="uid://cxn88tafqpt5q" path="res://art/dumpster.png" id="1_p0u2l"]
+[ext_resource type="Texture2D" uid="uid://cxn88tafqpt5q" path="res://dumpster/dumpster.png" id="1_p0u2l"]
 
 [node name="Node2D" type="Node2D" unique_id=1074375207]
 
