@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemAttribute" format=3 uid="uid://jxiaqtq5whtw"]
+
+[ext_resource type="Script" uid="uid://donua4hgjpc2t" path="res://items/item_attribute.gd" id="1_kdava"]
+
+[resource]
+script = ExtResource("1_kdava")
+name = &"Rank"
+flavor = "Ugh, do you smell that?"
+desc = "Rocky doesn't love having stinky things in his shop, so this item is less valuable."
+value_multiplier = 0.6
+metadata/_custom_type_script = "uid://donua4hgjpc2t"

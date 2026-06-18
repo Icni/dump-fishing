@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b7e1sdwf1xufm"]
 
 [ext_resource type="Texture2D" uid="uid://cnfh1hat508d4" path="res://fishing bar/fishing_bar_bg.png" id="1_ee0s1"]
-[ext_resource type="Script" uid="uid://dn5mg6goowq6i" path="res://fishing bar/fishing_bar.gd" id="1_mgyri"]
+[ext_resource type="Script" uid="uid://dswetshkaoa46" path="res://fishing_bar.gd" id="1_iw2ly"]
+[ext_resource type="Script" uid="uid://dn5mg6goowq6i" path="res://fishing bar/bar_controller.gd" id="1_mgyri"]
 [ext_resource type="Texture2D" uid="uid://c6uuy28l1a5w8" path="res://fishing bar/fishing_bar.png" id="2_mgyri"]
 [ext_resource type="Script" uid="uid://clqjjcbriqhdr" path="res://target.gd" id="2_q7h3n"]
 [ext_resource type="Texture2D" uid="uid://cmipdijj72jr5" path="res://fishing bar/target.png" id="2_ttsqj"]
@@ -25,6 +26,7 @@ size = Vector2(12, 28.050003)
 radius = 3.0
 
 [node name="FishingBar" type="Node2D" unique_id=62285843]
+script = ExtResource("1_iw2ly")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1916395970]
 position = Vector2(8, 64)

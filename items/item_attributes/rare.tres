@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemAttribute" format=3 uid="uid://dolsne6qvp5bw"]
+
+[ext_resource type="Script" uid="uid://donua4hgjpc2t" path="res://items/item_attribute.gd" id="1_xn6qt"]
+
+[resource]
+script = ExtResource("1_xn6qt")
+name = &"Rare"
+flavor = "O•O"
+desc = "There's not a lot out there like this one."
+metadata/_custom_type_script = "uid://donua4hgjpc2t"
