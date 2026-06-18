@@ -7,4 +7,5 @@ script = ExtResource("1_xn6qt")
 name = &"Rare"
 flavor = "O•O"
 desc = "There's not a lot out there like this one."
+rarity = 0.001
 metadata/_custom_type_script = "uid://donua4hgjpc2t"

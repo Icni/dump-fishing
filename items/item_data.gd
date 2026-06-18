@@ -14,3 +14,5 @@ extends Resource
 ## The base for calculating how much money the item is worth.
 ## This does NOT include change from inherent attributes.
 @export var base_value: float
+## The probability weight of this item being chosen
+@export var rarity: float = 1

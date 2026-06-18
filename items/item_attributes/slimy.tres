@@ -8,4 +8,5 @@ name = &"Slimy"
 flavor = "…is that gonna wash off?"
 desc = "Even though Rocky has gloves, he doesn't love to use them. This item is slightly less valuable."
 value_multiplier = 0.8
+rarity = 0.2
 metadata/_custom_type_script = "uid://donua4hgjpc2t"

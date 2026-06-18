@@ -8,4 +8,5 @@ name = &"Rank"
 flavor = "Ugh, do you smell that?"
 desc = "Rocky doesn't love having stinky things in his shop, so this item is less valuable."
 value_multiplier = 0.6
+rarity = 0.1
 metadata/_custom_type_script = "uid://donua4hgjpc2t"

@@ -20,8 +20,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
 func _on_catch():
 	catch.emit(hooked_item)
+
 
 func _on_loss():
 	loss.emit()
