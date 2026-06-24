@@ -87,8 +87,8 @@ continuous_cd = 1
 script = ExtResource("2_q7h3n")
 play_area = Rect2(6, 6, 4, 116)
 fixation = 0.1
-leap = 80.0
-speed = 4.0
+leap = 40.0
+speed = 3.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetRigidBody2D" unique_id=1900327560]
 shape = SubResource("CircleShape2D_ttsqj")

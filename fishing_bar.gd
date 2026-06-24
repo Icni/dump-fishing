@@ -2,9 +2,9 @@ class_name FishingBar
 extends Node2D
 
 
-var hooked_item: Item
-
 @onready var progress_bar := $ProgressBar
+
+var hooked_item: Item
 
 signal catch(item: Item)
 signal loss

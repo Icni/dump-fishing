@@ -43,8 +43,7 @@ func get_random_item() -> ItemData:
 	var rand = randf_range(0, _get_total_item_weight())
 	var idx = 0
 	for item in all_items:
+		idx += item.rarity
 		if idx >= rand:
 			return item
-		else:
-			idx += item.rarity
 	return null

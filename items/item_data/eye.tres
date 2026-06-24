@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://8cyoq3os6r1r"]
+
+[ext_resource type="Script" uid="uid://donua4hgjpc2t" path="res://items/item_attribute.gd" id="1_ci8wx"]
+[ext_resource type="Script" uid="uid://dltcpc76cdp6e" path="res://items/item_data.gd" id="2_fc500"]
+
+[resource]
+script = ExtResource("2_fc500")
+name = &"eye"
+metadata/_custom_type_script = "uid://dltcpc76cdp6e"

@@ -7,7 +7,7 @@ extends NinePatchRect
 
 var _touching_target := false
 
-var progress: float = 0:
+var progress: float = 0.2:
 	set(new_progress):
 		if new_progress >= 1:
 			reached_full.emit()

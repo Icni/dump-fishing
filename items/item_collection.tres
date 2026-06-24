@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemCollection" format=3 uid="uid://jfted4j74oc6"]
+
+[ext_resource type="Script" uid="uid://donua4hgjpc2t" path="res://items/item_attribute.gd" id="1_ig018"]
+[ext_resource type="Resource" uid="uid://jxiaqtq5whtw" path="res://items/item_attributes/rank.tres" id="2_2huon"]
+[ext_resource type="Resource" uid="uid://dolsne6qvp5bw" path="res://items/item_attributes/rare.tres" id="3_drynk"]
+[ext_resource type="Resource" uid="uid://c34taq4xbbwkd" path="res://items/item_attributes/slimy.tres" id="4_hh5ai"]
+[ext_resource type="Script" uid="uid://dltcpc76cdp6e" path="res://items/item_data.gd" id="5_u873y"]
+[ext_resource type="Script" uid="uid://br4cw8wurwimh" path="res://items/item_collection.gd" id="6_1i6p7"]
+[ext_resource type="Resource" uid="uid://8cyoq3os6r1r" path="res://items/item_data/eye.tres" id="6_2huon"]
+
+[resource]
+script = ExtResource("6_1i6p7")
+all_items = Array[ExtResource("5_u873y")]([ExtResource("6_2huon")])
+all_attributes = Array[ExtResource("1_ig018")]([ExtResource("2_2huon"), ExtResource("3_drynk"), ExtResource("4_hh5ai")])
+metadata/_custom_type_script = "uid://br4cw8wurwimh"

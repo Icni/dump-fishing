@@ -1,9 +1,30 @@
 [gd_scene format=3 uid="uid://c3738epjv0xbw"]
 
 [ext_resource type="Texture2D" uid="uid://cxn88tafqpt5q" path="res://dumpster/dumpster.png" id="1_p0u2l"]
+[ext_resource type="Script" uid="uid://ccfx8yen7xn6e" path="res://dumpster/dumpster.gd" id="1_s6wpt"]
+[ext_resource type="PackedScene" uid="uid://b7e1sdwf1xufm" path="res://fishing_bar.tscn" id="2_v7t28"]
+[ext_resource type="Resource" uid="uid://jfted4j74oc6" path="res://items/item_collection.tres" id="3_aslgh"]
+[ext_resource type="SpriteFrames" uid="uid://cfn0qdmev4fkx" path="res://fishing bar/catch_animation.aseprite" id="4_kqkgi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6wpt"]
+size = Vector2(172, 130)
 
 [node name="Node2D" type="Node2D" unique_id=1074375207]
+script = ExtResource("1_s6wpt")
+fishing_bar_scene = ExtResource("2_v7t28")
+item_collection = ExtResource("3_aslgh")
 
 [node name="Dumpster" type="Sprite2D" parent="." unique_id=78713188]
 position = Vector2(160, 90)
 texture = ExtResource("1_p0u2l")
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=577829212]
+position = Vector2(160, 90)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=1678997848]
+shape = SubResource("RectangleShape2D_s6wpt")
+
+[node name="CatchAnimation" type="AnimatedSprite2D" parent="." unique_id=1111429254]
+position = Vector2(160, 91)
+sprite_frames = ExtResource("4_kqkgi")
+frame_progress = 0.305764
